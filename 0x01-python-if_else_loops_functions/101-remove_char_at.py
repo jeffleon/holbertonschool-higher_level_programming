@@ -1,4 +1,7 @@
 #!/usr/bin/python3
 def remove_char_at(str, n):
     aux = ""
-    return str[:n] + str[n + 1:] if str is not None else aux
+    for i in range(len(str)):
+        if i != n:
+            aux+=str[i]
+    return aux
