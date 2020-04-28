@@ -6,8 +6,8 @@ def fizzbuzz():
         elif i % 5 == 0:
             str_ = "buzz"
         elif i % 3 == 0:
-            str_"fizz"
+            str_ = "fizz"
         else:
-            i
-        print(str, end=' ')
+            str_ = str(i)
+        print(str_, end=' ')
 fizzbuzz()
