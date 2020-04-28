@@ -9,4 +9,4 @@ elif int(last_) < 6 and int(last_) != 0:
     str_2 = "and is less than 6 and not 0"
 else:
     str_2 = "and is 0"
-print(str_1 + str_2)
+print("{}{}".format(str_1,str_2))
