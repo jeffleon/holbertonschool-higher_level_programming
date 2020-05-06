@@ -38,8 +38,11 @@ int is_palindrome(listint_t **head)
 
 	if (head == NULL || *head == NULL)
 		return (1);
-	for (; cv->next && cv->next->next; cp = cp->next, cv = cv->next->next)
-	{}
+	while (cv->next && cv->next->next)
+	{
+		cp = cp->next;
+		cv = cv->next->next;
+	}
 	reverse_listint(&cp);
 	cv = *head;
 	for (; cp && cv; cp = cp->next, cv = cv->next)
