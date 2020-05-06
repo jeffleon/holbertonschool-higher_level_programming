@@ -34,9 +34,8 @@ listint_t *reverse_listint(listint_t **head)
 int is_palindrome(listint_t **head)
 {
 	listint_t *cp = *head, *cv = *head;
-	int len = 0, i = 0;
 
-	if (head == NULL || *head == NULL)
+	if (*head == NULL)
 		return (1);
 	while (cv->next && cv->next->next)
 	{
