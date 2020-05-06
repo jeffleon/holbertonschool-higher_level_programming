@@ -33,17 +33,17 @@ listint_t *reverse_listint(listint_t **head)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *copy = *head, *head_2 = NULL, *copy_2 = NULL;
+	listint_t *cp = *head, *cv = *head;
+	int len = 0, i = 0;
 
-	if (head == NULL || *head == NULL || (*head)->next == NULL)
+	if (head == NULL || *head == NULL)
 		return (1);
-	for (; copy; copy = copy->next)
-		add_nodeint_end(&head_2, copy->n);
-	reverse_listint(&head_2);
-	copy = *head;
-	copy_2 = head_2;
-	for (; copy || copy_2; copy = copy->next, copy_2 = copy_2->next)
-		if (copy->n != copy_2->n)
+	for (; cv->next && cv->next->next; cp = cp->next, cv = cv->next->next)
+	{}
+	reverse_listint(&cp);
+	cv = *head;
+	for (; cp && cv; cp = cp->next, cv = cv->next)
+		if (cv->n != cv->n)
 			return (0);
 	return (1);
 }
