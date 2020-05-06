@@ -40,8 +40,10 @@ int is_palindrome(listint_t **head)
 	}
 	reverse_listint(&cp);
 	cv = *head;
-	for (; cp && cv; cp = cp->next, cv = cv->next)
-		if (cv->n != cv->n)
+	for (; cp && cv; cv = cv->next, cp = cp->next)
+	{
+		if (cv->n != cp->n)
 			return (0);
+	}
 	return (1);
 }
