@@ -2,14 +2,14 @@
 def roman_to_int(roman_string):
     if not roman_string:
         return None
-    rom_dict = {"M": 1000, "D": 500, "C": 100, "L": 50,"X": 10, "V": 5, "I": 1}
-    roman_number = 0
-    rest_val = 0
+    num = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
+    total = 0
+    prev_val = 0
     for i in range(len(roman_string)):
-        for key, val in rom_dict.items():
+        for key, val in num.items():
             if key == roman_string[i]:
-                roman_number += val
-                if rest_val < val:
-                    roman_number -= (rest_val * 2)
-                    rest_val = val
-    return roman_number
+                total += val
+                if prev_val < val:
+                    total -= (prev_val * 2)
+                    prev_val = val
+    return total
