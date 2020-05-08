@@ -5,10 +5,11 @@ def roman_to_int(roman_string):
     rom_dict = {"M": 1000, "D": 500, "C": 100, "L": 50,"X": 10, "V": 5, "I": 1}
     roman_number = 0
     rest_val = 0
-    for letter in roman_string:
-        if letter in rom_dict:
-            roman_number += rom_dict[letter]
-            if rest_val < rom_dict[letter]:
-                roman_number -= (rest_val * 2)
-                rest_val = rom_dict[letter]
+    for i in range(len(roman_string)):
+        for key, val in rom_dict.items():
+            if key == roman_string[i]:
+                roman_number += val
+                if rest_val < val:
+                    roman_number -= (rest_val * 2)
+                    rest_val = val
     return roman_number
