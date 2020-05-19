@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-
 def safe_pprint_division(a, b):
     div = 0
     print("Inside result: ", end='')
@@ -8,5 +7,5 @@ def safe_pprint_division(a, b):
     except:
         div = None
     finally:
-        print("{:d}".format(div))
+        print("{}".format(div))
         return div
