@@ -11,15 +11,11 @@ class Square:
     @property
     def size(self):
         """ the Geeter of size """
-
-
         return self.__size
 
     @size.setter
     def size(self, size1=0):
         """ the Setter of size """
-
-
         if type(size1) is int:
             if size1 >= 0:
                 self.__size = size1
@@ -31,19 +27,18 @@ class Square:
     @property
     def position(self):
         """ the Getter of position """
-
-
         return self.__position
 
     @position.setter
     def position(self, value=(0, 0)):
         """ the Setter of position """
+        if (
+                not isinstance(value, tuple) or len(value) != 2 or
+                not isinstance(value[0], int) or
+                not isinstance(value[1], int) or
+                value[0] < 0 or value[1] < 0
+        ):
 
-
-        if (not isinstance(value, tuple) or len(value) != 2 or
-            not isinstance(value[0], int) or
-            not isinstance(value[1], int) or
-            value[0] < 0 or value[1] < 0):
             raise TypeError("position must be a tuple of 2 positive integers")
         else:
             self.__position = value
