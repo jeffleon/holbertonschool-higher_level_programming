@@ -10,10 +10,16 @@ class Square:
 
     @property
     def size(self):
+        """ the Geeter of size """
+
+
         return self.__size
 
     @size.setter
     def size(self, size1=0):
+        """ the Setter of size """
+
+
         if type(size1) is int:
             if size1 >= 0:
                 self.__size = size1
@@ -24,10 +30,16 @@ class Square:
 
     @property
     def position(self):
+        """ the Getter of position """
+
+
         return self.__position
 
     @position.setter
     def position(self, value=(0, 0)):
+        """ the Setter of position """
+
+
         condition1 = type(value[0]) is int and type(value[1]) is int
         condition2 = value[0] >= 0 and value[1] >= 0
         condition3 = len(value) == 2 and type(value) is tuple
@@ -38,12 +50,13 @@ class Square:
 
     def my_print(self):
         if (self.__position[1] > 0):
-            print(self.__position[1] * '')
+            for i in range(self.__position[1]):
+                print()
         if self.__size > 0:
             for i in range(self.__size):
                 for j in range(self.__size):
-                    if j == 0 and self.position[0] > 0:
-                        print(self.position[0] * ' ', end='')
+                    if j == 0 and self.__position[0] > 0:
+                        print(self.__position[0] * ' ', end='')
                     print('#', end='')
                 print()
         else:
