@@ -40,13 +40,14 @@ class Square:
         """ the Setter of position """
 
 
-        condition1 = type(value[0]) is int and type(value[1]) is int
-        condition2 = value[0] >= 0 and value[1] >= 0
-        condition3 = len(value) == 2 and type(value) is tuple
-        if condition1 and condition2 and condition3:
-            self.__position = value
-        else:
+        if len(value) != 2 and type(value) is not tuple:
             raise TypeError('position must be a tuple of 2 positive integers')
+        elif type(value[0] is not int and value[1] is not int):
+            raise TypeError('position must be a tuple of 2 positive integers')
+        elif value[0] < 0 and value[1] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        else:
+            self.__position = value
 
     def my_print(self):
         if (self.__position[1] > 0):
