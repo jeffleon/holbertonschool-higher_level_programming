@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+""" class square """
+
+
 class Square:
+    """ constructor of classs """
     def __init__(self, size=0):
         if type(size) is int:
             if (size < 0):
