@@ -1,4 +1,12 @@
+#!/usr/bin/python3
+"""
+This module print a square
+"""
 def print_square(size):
+    """
+    This function print a squre
+    and if size is not a int dont work
+    """
     errores = {'Type': 'size must be an integer',
                 'Zero': 'size must be >= 0'}
     if not isinstance(size, (float, int)):
