@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Project of unit test
+"""
 def add_integer(a, b=98):
     """ Add 2 integers if one of both arguments
         its diferent type of int or float raise a
