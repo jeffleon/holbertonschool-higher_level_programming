@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+"""
+This is a function of the matrix divided
+"""
 def matrix_divided(matrix, div):
+    """
+    This is a function of the matrix divided
+    """
     co = list()
     r = []
     err = {'Ty': 'matrix must be a matrix (list of lists) of integers/floats',
