@@ -18,7 +18,10 @@ class Rectangle:
         for col in range(self.__height):
             for row in range(self.__width):
                 rect += '#'
-            rect += '\n'
+            if col == self.__height - 1:
+                break
+            else:
+                rect += '\n'
         return rect
 
     @property
