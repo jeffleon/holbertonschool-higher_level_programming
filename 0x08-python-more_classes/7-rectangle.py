@@ -21,7 +21,7 @@ class Rectangle:
             return rect
         for col in range(self.__height):
             for row in range(self.__width):
-                rect += str(print_symbol)
+                rect += str(self.print_symbol)
             if col == self.__height - 1:
                 break
             else:
