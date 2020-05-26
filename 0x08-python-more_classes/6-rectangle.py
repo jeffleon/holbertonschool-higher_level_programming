@@ -5,12 +5,13 @@
 
 class Rectangle:
     """Class Rectangle"""
-    instances = 0
+    number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """constructor"""
         self.width = width
         self.height = height
-        self.instances += 1
+        self.number_of_instances += 1
 
     def __str__(self):
         """print a object"""
@@ -30,7 +31,7 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.__width, self.__height)
 
     def __del__(self):
-        self.instances -= 1
+        self.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
@@ -62,9 +63,6 @@ class Rectangle:
             raise ValueError('height must be >= 0')
         else:
             self.__height = value
-
-    def number_of_instances(self):
-        return self.instances
 
     def area(self):
         return self.__height * self.__width
