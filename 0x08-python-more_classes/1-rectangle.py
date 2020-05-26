@@ -1,7 +1,11 @@
 #!/bin/usr/python3
+""" Rectangle """
+
+
 class Rectangle:
     """ Class Rectangule """
     def __init__(self, width=0, height=0):
+        """ Constructor """
         self.width = width
         self.height = height
 
@@ -11,12 +15,12 @@ class Rectangle:
         return self.__width
 
     @width.setter
-    def width(self, width):
+    def width(self, val):
         """ Setter width"""
-        if type(width) is not int:
+        if type(val) is not int:
             raise TypeError("width must be an integer")
-        if width >= 0:
-            self.__width = width
+        if val >= 0:
+            self.__width = val
         else:
             raise ValueError("width must be >= 0")
 
@@ -26,11 +30,11 @@ class Rectangle:
         return self.__height
 
     @height.setter
-    def height(self, height):
+    def height(self, val):
         """ Setter height"""
-        if type(height) is not int:
+        if type(val) is not int:
             raise TypeError("height must be an integer")
-        if height >= 0:
-            self.__height = height
+        if val >= 0:
+            self.__height = val
         else:
             raise ValueError("height must be >= 0")
