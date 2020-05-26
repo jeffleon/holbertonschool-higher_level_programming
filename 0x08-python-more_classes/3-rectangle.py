@@ -11,8 +11,9 @@ class Rectangle:
         self.height = height
 
     def __str__(self):
+        """print a object"""
         rect = ''
-        if self.__height == 0 or self.__width:
+        if self.__height == 0 or self.__width == 0:
             return rect
         for col in range(self.__height):
             for row in range(self.__width):
