@@ -1,9 +1,4 @@
 #!/bin/usr/python3
-"""
-Rectangule
-"""
-
-
 class Rectangle:
     """ Class Rectangule """
     def __init__(self, width=0, height=0):
