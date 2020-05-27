@@ -2,6 +2,8 @@
 """
    only keep the first name attribute
 """
+
+
 class LockedClass:
     """
     Class Locked
