@@ -1,0 +1,15 @@
+File Edit Options Buffers Tools Help
+=============
+7-base_geometry
+==============
+
+        >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("int", 4)
+
+        >>> bg = BaseGeometry()
+        >>> bg.integer_validator("string", "string")
+        Traceback (most recent call last):
+            ...
+        TypeError: name must be an integer
+y
