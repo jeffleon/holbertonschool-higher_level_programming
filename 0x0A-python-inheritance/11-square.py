@@ -34,6 +34,7 @@ class BaseGeometry:
         elif value <= 0:
             raise ValueError("{:s} must be greater than 0".format(name))
 
+
 class Rectangle(BaseGeometry):
     """
     Class Rectangle
