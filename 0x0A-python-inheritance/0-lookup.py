@@ -2,6 +2,8 @@
 """
 Class lookup
 """
+
+
 def lookup(obj):
     """
     Return a dic with all methods

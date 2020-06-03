@@ -2,6 +2,8 @@
 """
 Class Inherits_from
 """
+
+
 def inherits_from(obj, a_class):
     """
     Return True is not a type but isintastance
