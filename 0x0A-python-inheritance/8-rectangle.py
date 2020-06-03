@@ -26,5 +26,7 @@ class Rectangle(BaseGeometry):
         """
         Initializes the subclass
         """
+        super().integer_validator("width", width)
         self.__width = width
+        super().integer_validator("height", height)
         self.__height = height
