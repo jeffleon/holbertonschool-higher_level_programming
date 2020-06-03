@@ -2,7 +2,7 @@
 """
 Class Myint
 """
-class Myint(int):
+class MyInt(int):
     """
     Init my int
     """
