@@ -2,6 +2,8 @@
 """
 Class BaseGeometry
 """
+
+
 class BaseGeometry:
     """
     Raise a Exception
