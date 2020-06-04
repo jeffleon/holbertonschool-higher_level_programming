@@ -1,11 +1,17 @@
 #!/usr/bin/python3
 def pascal_triangle(n):
-    listaout = []
-    listain = []
+    lstout = []
+    lstin = []
     if n <= 0:
-        return lista
+        return lstout
     for outs in range(n):
-        listain = [1]
+        lstin = [1]
+        cnt = 0
         for ins in range(outs):
-            listain.append(ins + 1)
-        listaout.append(listain[:])
+            if ins == outs - 1:
+                lstin.append(1)
+            else:
+                lstin.append(lstout[outs - 1][cnt] + lstout[outs - 1][cnt + 1])
+                cnt += 1
+        lstout.append(lstin[:])
+    return lstout
