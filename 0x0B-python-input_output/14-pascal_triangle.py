@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""
+Pascal function
+"""
+
+
 def pascal_triangle(n):
+    """
+    Define of function
+    """
     lstout = []
     lstin = []
     if n <= 0:
