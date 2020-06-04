@@ -5,7 +5,7 @@ Handle Files
 
 
 def class_to_json(obj):
-       """
-       Return a Dictionary with attributes
-       """
-       return obj.__dict__
+    """
+    Return a Dictionary with attributes
+    """
+    return obj.__dict__
