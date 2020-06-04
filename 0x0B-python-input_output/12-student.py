@@ -20,7 +20,7 @@ class Student:
         """
         Return a Dictionary
         """
-        if attrs == None:
+        if attrs is None:
             return self.__dict__
         dic = dict()
         for atr in attrs:
