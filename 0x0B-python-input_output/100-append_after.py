@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+Function Append_after
+"""
+
+
 def append_after(filename="", search_string="", new_string=""):
     """
     Function that add a new string determinates for a search
