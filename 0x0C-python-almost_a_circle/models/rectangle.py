@@ -80,7 +80,9 @@ class Rectangle(Base):
                         break
 
     def __str__(self):
-        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y, self.width, self.height)
+        return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y,
+                                                       self.width, self.height)
 
     def to_dictionary(self):
-        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height, 'width': self.width}
+        return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
+                'width': self.width}
