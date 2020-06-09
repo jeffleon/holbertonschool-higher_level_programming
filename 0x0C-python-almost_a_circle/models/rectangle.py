@@ -5,7 +5,9 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class Rectangle inheritence of Base"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
+        """init docstream"""
         self.width = width
         self.height = height
         self.x = x
@@ -61,12 +63,12 @@ class Rectangle(Base):
         self.__y = y
 
     def area(self):
-        return self.height * self.width
+        return self.__height * self.__width
 
     def display(self):
-        print('\n' * self.y, end='')
-        for h in range(self.height):
-            print(' ' * self.x + '#' * self.width)
+        print('\n' * self.__y, end='')
+        for h in range(self.__height):
+            print(' ' * self.__x + '#' * self.__width)
 
     def update(self, *args, **kwargs):
         lista = ['id', 'width', 'height', 'x', 'y']
