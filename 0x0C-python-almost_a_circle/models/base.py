@@ -44,8 +44,11 @@ class Base:
 
     @classmethod
     def load_from_file(cls):
-        with open('{}.json'.format(cls.__name__), 'r') as file:
-            str = file.read()
+        try:
+            with open('{}.json'.format(cls.__name__), 'r') as file:
+                str = file.read()
+        except IOError:
+            return []
         lista = cls.from_json_string(str)
         lista_flag = list()
         for el in lista:
