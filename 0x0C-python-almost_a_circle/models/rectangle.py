@@ -114,14 +114,17 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """docstring"""
         return self.__height * self.__width
 
     def display(self):
+        """docstring"""
         print('\n' * self.__y, end='')
         for h in range(self.__height):
             print(' ' * self.__x + '#' * self.__width)
 
     def update(self, *args, **kwargs):
+        """docstring"""
         lista = ['id', 'width', 'height', 'x', 'y']
         for en, a in enumerate(args):
             setattr(self, lista[en], a)
@@ -133,9 +136,11 @@ class Rectangle(Base):
                         break
 
     def __str__(self):
+        """docstring"""
         return '[Rectangle] ({}) {}/{} - {}/{}'.format(self.id, self.x, self.y,
                                                        self.width, self.height)
 
     def to_dictionary(self):
+        """docstring"""
         return {'x': self.x, 'y': self.y, 'id': self.id, 'height': self.height,
                 'width': self.width}
