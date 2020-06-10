@@ -84,14 +84,18 @@ class Base:
     def load_from_file_csv(cls):
         """docstring"""
         lista = []
-        with open('{}.csv'.format(cls.__name__), 'r') as f:
-            for line in f:
-                mat = line.split(',')
-                mat2 = [int(a) for a in mat]
-                print(mat2)
-                if len(mat2) == 5:
-                    sol = cls(mat2[1], mat2[2], mat2[3], mat2[4], mat2[0])
-                elif len(mat2) == 4:
-                    sol = cls(mat2[1], mat2[2], mat2[3], mat2[0])
-                lista.append(sol)
-            return lista
+        filename = '{}.csv'.format(cls.__name__)
+        try:
+            with open(filename, mode='r', encoding='utf-8') as f:
+                for line in f:
+                    mat = line.split(sep=',')
+                    if len(mat) == 5:
+                        sol = cls(int(mat2[1]), int(mat2[2]), int(mat2[3]),
+                                  int(mat2[4]), int(mat2[0]))
+                    elif len(mat) == 4:
+                        sol = cls(int(mat2[1]), int(mat2[2]), int(mat2[3]),
+                                  int(mat2[0]))
+                    lista.append(sol)
+                return lista
+        except IOError:
+            return []
