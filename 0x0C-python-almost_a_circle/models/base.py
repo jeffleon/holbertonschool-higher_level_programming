@@ -75,8 +75,8 @@ class Base:
                 cadena += '{},{},{},{},{}\n'.format(el.id, el.width,
                                                     el.height, el.x, el.y)
             elif cls.__name__ == 'Square':
-                 cadena += '{},{},{},{}\n'.format(el.id, el.size, el.x,
-                                                  el.y)
+                cadena += '{},{},{},{}\n'.format(el.id, el.size, el.x,
+                                                 el.y)
         with open('{}.csv'.format(cls.__name__), 'w+') as f:
             f.write(cadena)
 
