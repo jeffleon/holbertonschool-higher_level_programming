@@ -65,3 +65,33 @@ class Base:
             arreglos = cls.create(**el)
             lista_flag.append(arreglos)
         return lista_flag
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """docstring"""
+        cadena = ''
+        for el in list_objs:
+            if cls.__name__ == 'Rectangle':
+                cadena += '{},{},{},{},{}\n'.format(el.id, el.width,
+                                                    el.height, el.x, el.y)
+            elif cls.__name__ == 'Square':
+                 cadena += '{},{},{},{}\n'.format(el.id, el.size, el.x,
+                                                  el.y)
+        with open('{}.csv'.format(cls.__name__), 'w+') as f:
+            f.write(cadena)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """docstring"""
+        lista = []
+        with open('{}.csv'.format(cls.__name__), 'r') as f:
+            for line in f:
+                mat = line.split(',')
+                mat2 = [int(a) for a in mat]
+                print(mat2)
+                if len(mat2) == 5:
+                    sol = cls(mat2[1], mat2[2], mat2[3], mat2[4], mat2[0])
+                elif len(mat2) == 4:
+                    sol = cls(mat2[1], mat2[2], mat2[3], mat2[0])
+                lista.append(sol)
+            return lista
