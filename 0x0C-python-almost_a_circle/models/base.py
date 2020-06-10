@@ -90,12 +90,12 @@ class Base:
                 for line in f:
                     mat = line.split(sep=',')
                     if len(mat) == 5:
-                        sol = cls(int(mat2[1]), int(mat2[2]), int(mat2[3]),
-                                  int(mat2[4]), int(mat2[0]))
+                        sol = cls(int(mat[1]), int(mat[2]), int(mat[3]),
+                                  int(mat[4]), int(mat[0]))
                     elif len(mat) == 4:
-                        sol = cls(int(mat2[1]), int(mat2[2]), int(mat2[3]),
-                                  int(mat2[0]))
+                        sol = cls(int(mat[1]), int(mat[2]), int(mat[3]),
+                                  int(mat[0]))
                     lista.append(sol)
-                return lista
+            return lista
         except IOError:
             return []
