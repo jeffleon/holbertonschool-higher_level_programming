@@ -1,2 +1,2 @@
 -- Delete SQL Data Base
-DROP DATABASE database IF EXISTS hbtn_0c_0;
+DROP DATABASE IF EXISTS hbtn_0c_0;
