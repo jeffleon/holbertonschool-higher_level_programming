@@ -8,7 +8,7 @@ if __name__ == '__main__':
                          passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
     query = "select * from states where name like binary '{}'"\
-    .format(sys.argv[4])
+        .format(sys.argv[4])
     cursor.execute(query)
     results = cursor.fetchall()
     for result in results:
