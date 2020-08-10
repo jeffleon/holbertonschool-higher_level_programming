@@ -4,7 +4,8 @@ if __name__ == '__main__':
     import MySQLdb
     import sys
     """ find a coincidence between database and typed arg"""
-    db = MySQLdb.connect(host="127.0.0.1", user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    db = MySQLdb.connect(host="127.0.0.1", user=sys.argv[1],
+                         passwd=sys.argv[2], db=sys.argv[3])
     cursor = db.cursor()
     query = "select * from states where name = '{}'".format(sys.argv[4])
     cursor.execute(query)
