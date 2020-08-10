@@ -10,7 +10,7 @@ if __name__ == '__main__':
     cursor.execute("select cities.name "
                    "from cities inner join states "
                    "on cities.state_id = states.id "
-                   "where states.name = %s " 
+                   "where states.name = %s "
                    "order by cities.id ASC;", (sys.argv[4],))
     result = list()
     results = cursor.fetchall()
