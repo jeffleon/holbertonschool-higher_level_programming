@@ -1,3 +1,3 @@
 #!/bin/bash
 # Show the Location
-curl -L $1
+curl -sL $1
