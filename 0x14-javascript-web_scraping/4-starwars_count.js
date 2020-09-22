@@ -6,10 +6,10 @@ request(process.argv[2], (error, response, body) => {
   if (error) { console.log(error); }
   const json = JSON.parse(body);
   json.results.forEach((elements) => {
-    var character = elements.characters.filter((element) => {
+    const character = elements.characters.filter((element) => {
       if (element.endsWith('18/')) { return element; }
     });
-    for (const el in character) { if (el) { count++; } }
+    for (const el in character) { if (el !== undefined) { count++; } }
   });
   console.log(count.toString());
 });
