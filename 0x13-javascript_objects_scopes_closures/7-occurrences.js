@@ -1,10 +1,10 @@
 #!/usr/bin/node
 module.exports.nbOccurences = function (list, searchElement) {
-  let nvar = 0;
+  let ocurren = 0;
   for (let i = 0; i < list.length; i++) {
     if (list[i] === searchElement) {
-      nvar++;
+      ocurren++;
     }
   }
-  return nvar;
+  return ocurren;
 };
