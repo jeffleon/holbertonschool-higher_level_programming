@@ -7,11 +7,9 @@ request(process.argv[2], (error, response, body) => {
   const json = JSON.parse(body);
   json.results.forEach((elements) => {
     var character = elements.characters.filter((element) => {
-      const index = element.search('people/');
-      const split = element.slice(index + 7).replace('/', '');
-      if (parseInt(split, 10) === 18) { return split; }
+      if (element.endsWith('18/')) { return element; }
     });
     for (const el in character) { if (el) { count++; } }
   });
-  console.log(count);
+  console.log(count.toString());
 });
